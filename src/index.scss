@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@100;200;300;400;500&family=Barlow:wght@100;200;300;400&family=Gilda+Display&display=swap');
+// font-family: 'Barlow', sans-serif;
+// font-family: 'Barlow Condensed', sans-serif;
+// font-family: 'Gilda Display', serif;
+
+
+.container {
+  max-width: 1140px !important;
+}
+
+@media screen and (max-width: 1200px) {
+  .container {
+
+    max-width: 1140px !important;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .container {
+
+    max-width: 960px !important;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+
+    max-width: 720px !important;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .container {
+
+    max-width: 540px !important;
+  }
+}

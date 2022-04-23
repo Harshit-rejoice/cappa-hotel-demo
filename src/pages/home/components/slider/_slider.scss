@@ -1,0 +1,491 @@
+.main__slider {
+    height: 100vh !important;
+    width: 100%;
+    // overflow: hidden;
+    position: relative;
+}
+
+.sider__Wrapper {
+    object-fit: cover;
+    // overflow: hidden;
+    position: relative;
+}
+
+.slider__bg-img,
+.slider__bg,
+.slick-slide,
+.slick-slider {
+    width: 100%;
+    height: 100vh;
+}
+
+.slider__bg-img {
+    object-fit: cover;
+    filter: brightness(0.6);
+}
+
+.slick-dots {
+
+    display: flex !important;
+    flex-direction: column;
+    top: 0;
+    right: 50px;
+    justify-content: center;
+    align-items: flex-end;
+    height: 100vh;
+    width: auto;
+
+
+    >li {
+        margin: 5px 0;
+        border: none;
+
+        >button {
+            &::before {
+                color: transparent !important;
+                border: 1px solid white;
+                border-radius: 50%;
+                width: 12px;
+                height: 12px;
+                opacity: 0.7;
+            }
+        }
+
+    }
+
+    .slick-active {
+        >button {
+            &::before {
+                background-color: #aa8453 !important;
+                opacity: 1 !important;
+                border: none;
+            }
+        }
+
+    }
+}
+
+.slider__contact-wrapper {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    bottom: 0;
+    left: -50px;
+
+    >div {
+
+        transform: rotate(-90deg);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+}
+
+.slider__contact-text {
+    margin-left: 15px;
+
+    span {
+        color: white;
+        font-family: 'Barlow Condensed', sans-serif;
+        text-transform: uppercase;
+        letter-spacing: 4px;
+        font-size: 14px;
+    }
+
+    p {
+        color: #aa8453;
+        font-family: 'Gilda Display', serif;
+        font-size: 25px;
+        letter-spacing: 2px;
+        margin: 0;
+    }
+}
+
+.slider__contact-botton {
+    color: white;
+    border: 1px solid white;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    font-size: 22px;
+    opacity: 0.7;
+    transform: scale(1) rotate(90deg);
+    animation-name: sider_contact_button;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.slider__content {
+    position: absolute;
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    flex-direction: column;
+}
+
+.slider__content-star {
+    color: #e4a853;
+    font-size: 18px;
+    display: flex;
+    grid-gap: 5px;
+    margin-bottom: 30px;
+    opacity: 0;
+
+}
+
+.slider__content-description {
+    color: white;
+    text-transform: uppercase;
+    font-family: 'Barlow Condensed', sans-serif;
+    letter-spacing: 6px;
+    font-size: 14px;
+    animation-delay: 0.4s;
+    opacity: 0;
+
+}
+
+.slider__content-heading {
+    color: white;
+    text-transform: uppercase;
+    font-family: 'Gilda Display', serif;
+    letter-spacing: 10px;
+    font-size: 70px;
+    text-align: center;
+    animation-delay: 0.6s;
+    opacity: 0;
+
+}
+
+.slider__content-button {
+    color: white;
+    text-transform: uppercase;
+    font-family: 'Barlow Condensed', sans-serif;
+    letter-spacing: 3px;
+    font-size: 14px;
+    border: none;
+    border: 1px solid white;
+    background-color: transparent;
+    padding: 10px 20px;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    transition-duration: 0.3s;
+    animation-delay: 0.8s;
+    opacity: 0;
+
+
+    &:hover {
+        color: black;
+
+        span {
+
+            &::after {
+                width: 100%;
+                left: 0;
+                transition: width 0.3s ease;
+            }
+        }
+    }
+
+    span {
+        &::after {
+            transition: all 0.3s ease;
+            background-color: white;
+            position: absolute;
+            width: 0;
+            height: 100%;
+            left: 100%;
+            bottom: 0;
+            content: '';
+            z-index: -1;
+        }
+    }
+}
+
+
+.animate___fadeInUp {
+    animation-name: fadeinup;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
+
+@keyframes fadeinup {
+    from {
+        transform: translate(0, 50px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translate(0, 0);
+        opacity: 1;
+
+    }
+}
+
+@keyframes sider_contact_button {
+    0% {
+        transform: scale(1) rotate(90deg);
+    }
+
+    50% {
+        transform: scale(1.07) rotate(90deg);
+
+    }
+
+    0% {
+        transform: scale(1) rotate(90deg);
+
+    }
+}
+
+
+.slider__reservation-wrapper {
+    position: absolute;
+    bottom: 60px;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .row {
+        --bs-gutter-x: 0;
+    }
+}
+
+.reservation-selector {
+    background-color: white;
+    cursor: text;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    height: 100%;
+
+    .reservation-input-icon {
+        color: #aa8453;
+        font-size: 20px;
+    }
+}
+
+.reservation-input {
+    border: none;
+    background: none;
+    font-family: 'Barlow', sans-serif;
+    width: 90%;
+
+    &::placeholder {
+        color: #222;
+        font-family: 'Barlow', sans-serif;
+        font-size: 16px;
+    }
+
+    &:focus {
+        outline: none;
+    }
+
+}
+
+.reservation-calander {
+    background-color: white;
+    bottom: 100%;
+    position: absolute;
+    opacity: 0;
+    transition: all 0.1s linear;
+    visibility: hidden;
+}
+
+.reservation-calander-active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.rdp-button.rdp-day_selected {
+
+    &:not([disabled]) {
+        background-color: #aa8453 !important;
+        border: #222 !important;
+    }
+
+    &:hover {
+
+        &:not([disabled]) {
+            background-color: #aa8453 !important;
+            border: #222 !important;
+        }
+    }
+
+}
+
+
+.rdp-button {
+    &:focus {
+        &:not([disabled]) {
+            border: #222 !important;
+        }
+    }
+
+    &:hover {
+        &:not([disabled]) {
+            background-color: rgba(171, 133, 84, 0.1) !important;
+            // color: black;
+        }
+    }
+
+    &:active {
+        &:not([disabled]) {
+            background-color: rgba(171, 133, 84, 0.1) !important;
+            border: #222 !important;
+
+        }
+    }
+}
+
+.rdp {
+    margin: 5px !important;
+    font-family: 'Barlow', sans-serif;
+
+}
+
+.rdp-caption {
+    background-color: #aa8453 !important;
+    color: white !important;
+
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+.form-select {
+    width: 100%;
+    border: none !important;
+    border-radius: 0 !important;
+    height: 100%;
+
+    &:focus {
+        border-color: none !important;
+        box-shadow: none !important;
+    }
+
+    option {
+        background-color: white;
+        padding: 20px !important;
+
+        &:hover {
+            background-color: #aa8453;
+        }
+    }
+}
+
+.reservation-selector-icon {
+    transform: rotate(180deg);
+    font-size: 22px;
+    color: #aa8453;
+}
+
+.reservation-selector-drop {
+    cursor: pointer;
+    font-family: 'Barlow Condensed', sans-serif;
+    letter-spacing: 1px;
+
+}
+
+.reservation-dropdown-menu {
+    background-color: white;
+    bottom: 100%;
+    position: absolute;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.1s linear;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    cursor: default;
+
+    span {
+        padding: 10px 0;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        text-align: center;
+        cursor: pointer;
+        font-family: 'Barlow Condensed', sans-serif;
+        letter-spacing: 1px;
+
+
+
+        &:hover {
+            background-color: #aa8453;
+            color: white;
+        }
+
+        &:last-child {
+
+            border-bottom: none;
+
+        }
+    }
+}
+
+.reservation-submit {
+    background-color: #aa8453;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    justify-content: center;
+    font-family: 'Barlow Condensed', sans-serif;
+    transition-duration: 0.3s;
+
+    &:hover {
+        background-color: #222;
+    }
+
+}
+
+.reservation-dropdown-menu-active {
+    opacity: 1;
+    visibility: visible;
+}
+
+@media screen and (max-width: 992px) {
+    .slick-dots {
+        display: none !important;
+    }
+
+    .slider__content-heading {
+        font-size: 44px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .slider__reservation-wrapper {
+        position: relative;
+        bottom: unset;
+        background: #f8f5f0;
+        padding: 30px;
+
+        .row {
+            --bs-gutter-x: 1rem;
+            --bs-gutter-y: 1rem
+        }
+    }
+}
