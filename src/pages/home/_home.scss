@@ -13,6 +13,550 @@
     color: #666666;
 }
 
-.about__content-heading{
-    
+.about__content-heading {
+    font-family: 'Gilda Display', serif;
+    color: #222222;
+    font-size: 50px;
+}
+
+.about__content-long-description {
+    font-family: 'Barlow ', sans-serif;
+    color: #666666;
+    font-size: 14px;
+}
+
+.about__content-reservation {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    svg {
+        color: #aa8453;
+        font-size: 32px;
+    }
+
+    .reservation-text {
+        margin-left: 20px;
+        display: flex;
+        flex-direction: column;
+
+        span {
+            font-family: 'Barlow Condensed', sans-serif;
+            letter-spacing: 1px;
+            color: #666666
+        }
+
+        a {
+            font-size: 26px;
+            font-family: 'Barlow Condensed', sans-serif;
+            color: #aa8453;
+            line-height: 1.5rem;
+            text-decoration: none;
+        }
+    }
+}
+
+.img-top-fix {
+    margin-top: 80px;
+}
+
+.about__content-section {
+    margin: 120px 0;
+}
+
+.rooms__section {
+    background-color: #f8f5f0;
+    padding: 120px 0;
+
+    .row {
+        --bs-gutter-y: 1.5rem
+    }
+}
+
+// Cards Section
+
+.room__card {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+
+    img {
+        filter: brightness(0.9);
+        transform: scale(1);
+
+        transition: all 0.5s ease-in-out;
+    }
+
+    &:hover {
+        .card__description-heading {
+            &::after {
+                width: 100%;
+                transition: all 0.7s ease-in-out;
+            }
+        }
+
+        img {
+            filter: brightness(0.6);
+            transform: scale(1.1);
+
+        }
+
+        .room_card-bg {
+            bottom: 0;
+        }
+
+
+    }
+}
+
+.room_card-bg {
+    background: linear-gradient(to bottom, transparent 0, rgba(0, 0, 0, .01) 2%, rgba(0, 0, 0, .75) 90%);
+    position: absolute;
+    bottom: -50px;
+    left: 0;
+    right: 0;
+    padding: 30px 0;
+    transition: all 0.2s ease-in-out;
+
+
+}
+
+.room__card-wrapper {
+
+    margin: 0 20px;
+}
+
+.room__card-description {
+    width: 100%;
+    color: white;
+
+    .card__description-price {
+        font-family: 'Barlow Condensed', sans-serif;
+        letter-spacing: 3px;
+        font-size: 16px;
+        position: relative;
+
+
+    }
+
+    .card__description-heading {
+        font-family: 'Gilda Display', serif;
+        font-size: 30px;
+        margin-bottom: 15px;
+        position: relative;
+
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+            width: 60px;
+            height: 0;
+            left: 0;
+            transition: all 0.3s ease-in-out;
+        }
+    }
+}
+
+.description__details-icon {
+    display: flex;
+    flex-direction: row;
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 20px;
+    column-gap: 10px;
+}
+
+.description__details-btn {
+    color: white;
+    cursor: pointer;
+    margin-right: 10px;
+    font-family: 'Barlow Condensed', sans-serif;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+
+    &:hover {
+        color: #aa8453;
+    }
+
+}
+
+.card__description-details {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.room_card-book-btn {
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    display: inline-block;
+    padding: 3px 10px;
+    color: white;
+    font-family: 'Barlow Condensed', sans-serif;
+    letter-spacing: 2px;
+    position: absolute;
+    top: 35px;
+    right: 5px;
+    transform: rotate(-90deg);
+}
+
+
+// services section
+
+.services__section {
+    background-color: #222;
+    padding: 120px 0;
+
+}
+
+.services-description {
+    color: #aa8453;
+}
+
+.services-heading {
+    color: white;
+}
+
+.services-long-description {
+    color: #ADADAD !important;
+}
+
+.service__slider__card-wrapper {
+    display: flex;
+    flex-direction: column;
+    padding: 0 10px;
+}
+
+.slider__card-img {
+    width: 100%;
+    height: auto;
+}
+
+.slider__card-details {
+    background-color: white;
+    padding: 30px 20px;
+
+}
+
+.card__details-heading {
+    background-color: white;
+    font-size: 22px;
+    font-family: 'Gilda Display', serif;
+    font-weight: 500;
+}
+
+.card__details-price {
+    font-family: 'Barlow ', sans-serif;
+    font-size: 14px;
+    color: #666666;
+
+    span {
+        font-size: 40px;
+        font-family: 'Gilda Display', serif;
+        color: #aa8453;
+    }
+
+}
+
+.card__details-facility {
+    margin: 0;
+    padding: 0;
+
+    li {
+        list-style-type: none;
+        border-bottom: none;
+        font-family: 'Barlow ', sans-serif;
+        color: #666666;
+        font-size: 14px;
+        margin: 5px 0;
+
+        svg {
+            color: #aa8453;
+            font-size: 18px;
+            margin-right: 10px;
+        }
+    }
+}
+
+:focus-visible {
+    outline: none;
+}
+
+.service__slider {
+    .slick-dots {
+        bottom: -50px;
+
+        >li {
+            margin: 5px 0;
+            border: none;
+
+            >button {
+                &::before {
+                    color: transparent !important;
+                    border: 1px solid white;
+                    border-radius: 50%;
+                    width: 12px;
+                    height: 12px;
+                    opacity: 0.7;
+                }
+            }
+
+        }
+
+        .slick-active {
+            >button {
+                &::before {
+                    background-color: #aa8453 !important;
+                    opacity: 1 !important;
+                    border: none;
+                }
+            }
+
+        }
+    }
+}
+
+
+// promo part
+
+.promo__video {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 120px 0;
+}
+
+.promo__bg {
+    background-image: url(../../assets/images/slider-2.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.promo__bg-opacity {
+    background-color: rgba(0, 0, 0, 0.3);
+
+}
+
+.play__btn {
+    // background-color: white;
+    color: #aa8453;
+    font-size: 50px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    position: relative;
+    z-index: 1;
+    border: 1px solid rgba(255, 255, 255, 1);
+    transition: color 0.5s cubic-bezier(1, 0, 0, 1);
+    ;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: white;
+        border-radius: 50%;
+        z-index: -1;
+        transform: scale(1);
+        transition: transform 0.5s cubic-bezier(1, 0, 0, 1);
+    }
+}
+
+.play__wrapepr {
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    padding: 5px;
+    cursor: pointer;
+
+    &:hover {
+        .play__btn {
+            color: white;
+
+            &::before {
+                transform: scale(0);
+            }
+        }
+    }
+}
+
+.facilities__bg {
+    background-color: white;
+    padding: 120px 0px;
+
+}
+
+.facilities__card {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 30px 20px;
+    position: relative;
+    height: 100%;
+}
+
+.facilities__card-icn {
+    color: #aa8453;
+    font-size: 60px;
+}
+
+.facilities__card-heading {
+    font-family: 'Gilda Display', serif;
+    font-weight: 400;
+    line-height: 1.25em;
+    margin: 0 0 20px 0;
+    color: #222;
+    font-size: 24px;
+    margin-top: 10px;
+}
+
+.facilities__card-description {
+    font-family: 'Barlow', sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 1.75em;
+    color: #666;
+    margin-bottom: 0;
+}
+
+.facilities__card-bg-icn {
+    font-size: 150px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0.4;
+    color: rgba(0, 0, 0, .05);
+}
+
+.testi__wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: left;
+    flex-direction: column;
+    padding: 120px 0;
+    position: relative;
+
+    .slick-slide>div {
+        margin: 0 10px;
+    }
+
+    .slick-list {
+        margin: 0 -10px;
+    }
+
+    .slick-dots {
+        bottom: -50px;
+
+        >li {
+            margin: 5px 0;
+            border: none;
+
+            >button {
+                &::before {
+                    color: transparent !important;
+                    border: 1px solid white;
+                    border-radius: 50%;
+                    width: 12px;
+                    height: 12px;
+                    opacity: 0.7;
+                }
+            }
+
+        }
+
+        .slick-active {
+            >button {
+                &::before {
+                    background-color: #aa8453 !important;
+                    opacity: 1 !important;
+                    border: none;
+                }
+            }
+
+        }
+    }
+}
+
+.testi-heading {
+    color: white;
+    font-size: 36px;
+    position: relative;
+
+    &::after {
+        content: '';
+        position: absolute;
+        width: 80px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+        bottom: 0;
+        left: 0;
+    }
+}
+
+.testi__person-wrapper {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.testi__person-description {
+    color: white;
+}
+
+.testi__person-profile-wrapper {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+
+    img {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+    }
+}
+
+.testi__person-profile-details {
+    margin-left: 20px;
+
+    .about__content-star {
+        font-size: 14px;
+        grid-gap: 2px;
+        margin-bottom: 0;
+    }
+}
+
+.testi__person-profile-name {
+    font-size: 16px;
+    color: white;
+    text-transform: uppercase;
+    font-family: 'Barlow Condensed', sans-serif;
+    letter-spacing: 2px;
+    margin-bottom: 0;
+}
+
+.testi__person-profile-type {
+    font-size: 12px;
+    color: #fff;
+
+}
+
+.testi__person-quote {
+    font-size: 60px;
+    color: white;
+    position: absolute;
+    right: 15px;
+    bottom: 0;
+    opacity: 0.2;
 }

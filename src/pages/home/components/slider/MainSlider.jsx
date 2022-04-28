@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import $ from 'jquery';
-import "../../../../../node_modules/slick-carousel/slick/slick.css";
-import "../../../../../node_modules/slick-carousel/slick/slick-theme.css";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import { slider1, slider2, slider3 } from "../../.../../../../assets/images/images-path";
 import './_slider.scss';
@@ -9,10 +9,8 @@ import { FiPhoneCall } from 'react-icons/fi';
 import { AiTwotoneStar } from 'react-icons/ai';
 import { MdDateRange, MdExpandLess } from 'react-icons/md';
 import { DayPicker } from 'react-day-picker';
-
-import { format } from 'date-fns';
 import 'react-day-picker/dist/style.css';
-import { Container, Row, Col, Form } from 'react-bootstrap';
+import { Container, Row, Col } from 'react-bootstrap';
 
 export default function MainSlider() {
     const settings = {
@@ -148,87 +146,90 @@ export default function MainSlider() {
 
     return (
         <>
-            <div className='main__slider'>
-                <Slider {...settings}>
-                    <div className='sider__Wrapper'>
-                        <div className='slider__bg'>
-                            <img src={slider1} alt="" className='slider__bg-img' />
-                        </div>
+            <div className='position-relative'>
 
-                        <div className='slider__content'>
-                            <div className='slider__content-star '>
-                                <AiTwotoneStar />
-                                <AiTwotoneStar />
-                                <AiTwotoneStar />
-                                <AiTwotoneStar />
-                                <AiTwotoneStar />
+                <div className='main__slider'>
+                    <Slider {...settings}>
+                        <div className='sider__Wrapper'>
+                            <div className='slider__bg'>
+                                <img src={slider1} alt="" className='slider__bg-img' />
                             </div>
-                            <p className='slider__content-description'>the ultimate luxury experience</p>
-                            <p className='slider__content-heading'>enjoy the best <br /> moments of life</p>
-                            <button className='slider__content-button'>
-                                rooms &#38; suites
-                                <span></span>
-                            </button>
-                        </div>
 
-                    </div>
-                    <div className='sider__Wrapper'>
-                        <div className='slider__bg'>
-                            <img src={slider2} alt="" className='slider__bg-img' />
-                        </div>
-
-
-                        <div className='slider__content'>
-                            <div className='slider__content-star '>
-                                <AiTwotoneStar />
-                                <AiTwotoneStar />
-                                <AiTwotoneStar />
-                                <AiTwotoneStar />
-                                <AiTwotoneStar />
+                            <div className='slider__content'>
+                                <div className='slider__content-star '>
+                                    <AiTwotoneStar />
+                                    <AiTwotoneStar />
+                                    <AiTwotoneStar />
+                                    <AiTwotoneStar />
+                                    <AiTwotoneStar />
+                                </div>
+                                <p className='slider__content-description'>the ultimate luxury experience</p>
+                                <p className='slider__content-heading'>enjoy the best <br /> moments of life</p>
+                                <button className='slider__content-button'>
+                                    rooms &#38; suites
+                                    <span></span>
+                                </button>
                             </div>
-                            <p className='slider__content-description'>Luxury hotel &#38; best resort</p>
-                            <p className='slider__content-heading'>enjoy a luxury <br /> experience</p>
-                            <button className='slider__content-button'>
-                                rooms &#38; suites
-                                <span></span>
-                            </button>
+
                         </div>
-
-                    </div>
-                    <div className='sider__Wrapper'>
-                        <div className='slider__bg'>
-                            <img src={slider3} alt="" className='slider__bg-img' />
-                        </div>
-
-
-                        <div className='slider__content'>
-                            <div className='slider__content-star'>
-                                <AiTwotoneStar />
-                                <AiTwotoneStar />
-                                <AiTwotoneStar />
-                                <AiTwotoneStar />
-                                <AiTwotoneStar />
+                        <div className='sider__Wrapper'>
+                            <div className='slider__bg'>
+                                <img src={slider2} alt="" className='slider__bg-img' />
                             </div>
-                            <p className='slider__content-description'>unique place to relex &#38; enjoy</p>
-                            <p className='slider__content-heading'>the prefecr base <br /> for you</p>
-                            <button className='slider__content-button'>
-                                rooms &#38; suites
-                                <span></span>
-                            </button>
+
+
+                            <div className='slider__content'>
+                                <div className='slider__content-star '>
+                                    <AiTwotoneStar />
+                                    <AiTwotoneStar />
+                                    <AiTwotoneStar />
+                                    <AiTwotoneStar />
+                                    <AiTwotoneStar />
+                                </div>
+                                <p className='slider__content-description'>Luxury hotel &#38; best resort</p>
+                                <p className='slider__content-heading'>enjoy a luxury <br /> experience</p>
+                                <button className='slider__content-button'>
+                                    rooms &#38; suites
+                                    <span></span>
+                                </button>
+                            </div>
+
+                        </div>
+                        <div className='sider__Wrapper'>
+                            <div className='slider__bg'>
+                                <img src={slider3} alt="" className='slider__bg-img' />
+                            </div>
+
+
+                            <div className='slider__content'>
+                                <div className='slider__content-star'>
+                                    <AiTwotoneStar />
+                                    <AiTwotoneStar />
+                                    <AiTwotoneStar />
+                                    <AiTwotoneStar />
+                                    <AiTwotoneStar />
+                                </div>
+                                <p className='slider__content-description'>unique place to relex &#38; enjoy</p>
+                                <p className='slider__content-heading'>the prefecr base <br /> for you</p>
+                                <button className='slider__content-button'>
+                                    rooms &#38; suites
+                                    <span></span>
+                                </button>
+                            </div>
+                        </div>
+                    </Slider>
+                    <div className='slider__contact-wrapper d-none d-md-flex'>
+                        <div>
+                            <div className='slider__contact-botton'>
+                                <FiPhoneCall />
+                            </div>
+                            <div className='slider__contact-text'>
+                                <span>Reservation</span>
+                                <p>855 100 4444</p>
+                            </div>
                         </div>
                     </div>
-                </Slider>
-                <div className='slider__contact-wrapper d-none d-md-flex'>
-                    <div>
-                        <div className='slider__contact-botton'>
-                            <FiPhoneCall />
-                        </div>
-                        <div className='slider__contact-text'>
-                            <span>Reservation</span>
-                            <p>855 100 4444</p>
-                        </div>
-                    </div>
-                </div>
+                </div >
                 <div className='slider__reservation-wrapper'>
                     <Container>
                         <Row>
@@ -381,7 +382,8 @@ export default function MainSlider() {
                         </Row>
                     </Container>
                 </div>
-            </div >
+            </div>
+
 
 
 
