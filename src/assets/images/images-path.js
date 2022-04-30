@@ -15,5 +15,19 @@ module.exports = {
     serviceSlide4: require('./service-slide-4.jpg'),
     testi_img_1: require('./testi-1.jpg'),
     testi_img_2: require('./testi-2.jpg'),
-    testi_img_3: require('./testi-3.jpg')
+    testi_img_3: require('./testi-3.jpg'),
+    fitness_center: require('./fitness center.jpg'),
+    health_club: require('./Health Club - Pool.jpg'),
+    restaurant: require('./restaurant.jpg'),
+    spa_center: require('./Spa Center.jpg'),
+    news1: require('./news-1.jpg'),
+    news2: require('./news-2.jpg'),
+    news3: require('./news-3.jpg'),
+    news4: require('./news-4.jpg'),
+    client1: require('./client-1.png'),
+    client2: require('./client-2.png'),
+    client3: require('./client-3.png'),
+    client4: require('./client-4.png'),
+    client5: require('./client-5.png'),
+
 }

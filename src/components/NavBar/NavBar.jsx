@@ -23,7 +23,7 @@ export default function NavBar() {
 
   return (
     <>
-      <Navbar className={scroll === true ? 'nav-scroll' : ''}>
+      <Navbar className={`${scroll === true ? 'nav-scroll' : ''} py-4`}>
         <Container>
           <Navbar.Brand href="#home">
             <div className="logo__wrapper">

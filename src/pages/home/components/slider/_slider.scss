@@ -460,6 +460,7 @@ input[type=number] {
     justify-content: center;
     font-family: 'Barlow Condensed', sans-serif;
     transition-duration: 0.3s;
+    cursor: pointer;
 
     &:hover {
         background-color: #222;
@@ -500,5 +501,12 @@ input[type=number] {
 
     .slider__content-heading {
         font-size: 28px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .reservation-calander {
+        left: 50%;
+        transform: translateX(-50%);
     }
 }

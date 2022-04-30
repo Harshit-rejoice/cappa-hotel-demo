@@ -372,13 +372,10 @@ export default function MainSlider() {
                             <Col xs={12} md={3} lg={2}>
                                 <div className='position-relative h-100'>
                                     <div className='reservation-selector reservation-submit'>
-
                                         CHECK NOW
                                     </div>
                                 </div>
                             </Col>
-
-
                         </Row>
                     </Container>
                 </div>
